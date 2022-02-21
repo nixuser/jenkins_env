@@ -1,3 +1,5 @@
+sudo sed -i 's_http://archive.ubuntu.com/ubuntu_mirror://mirrors.ubuntu.com/mirrors.txt_' /etc/apt/sources.list
+sudo sed -i 's_http://security.ubuntu.com/ubuntu_mirror://mirrors.ubuntu.com/mirrors.txt_' /etc/apt/sources.list
 sudo apt-get update
 sudo apt-get install \
     apt-transport-https \

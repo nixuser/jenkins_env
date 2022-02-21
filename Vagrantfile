@@ -23,11 +23,11 @@ Vagrant.configure("2") do |config|
                       virtualbox__intnet: 'ci'
                          
     agent.vm.provision "shell",
-      name: "Setup java",
-      path: "setup_java.sh"
-    agent.vm.provision "shell",
       name: "Setup Docker",
       path: "setup_docker.sh"
+    agent.vm.provision "shell",
+      name: "Setup java",
+      path: "setup_java.sh"
   end
 
 end
