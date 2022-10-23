@@ -1,6 +1,5 @@
 Vagrant.configure("2") do |config|
-  # Ubuntu 20.04
-  config.vm.box = "ubuntu/hirsute64"
+  config.vm.box = "ubuntu/jammy64"
 
   config.vm.define "server" do |server|
     server.vm.provision "shell",
