@@ -2,19 +2,19 @@ jobs:
   - script: >
       folder('testjobs')
   - script: >
-    pipelineJob('testjobs/dockerexample') {
-      definition {
-         cpsScm {
+      pipelineJob('testjobs/dockerexample') {
+        definition {
+          cpsScm {
             scm {
               git {
                 remote {
                   url('https://github.com/nixuser/jenkinsfileexample')
+                  }
+                  branch('master')
                 }
-                branch('master')
-              }
-            scriptPath('Jenkinsfile')
-            lightweight(true)
+              scriptPath('Jenkinsfile')
+              lightweight(true)
             }
+          }
         }
       }
-    }
