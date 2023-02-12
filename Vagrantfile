@@ -6,7 +6,10 @@ Vagrant.configure("2") do |config|
       name: "Setup Docker",
       path: "setup_docker.sh"
     server.vm.provision "shell",
-      name: "Start Jenkins",
+      name: "Build Jenkins image",
+      path: "jenkins_build.sh"
+    server.vm.provision "shell",
+      name: "Start Jenkins container",
       path: "jenkins_up.sh"
     server.vm.host_name = 'controller'
     server.vm.network "forwarded_port", guest: 8080, host: 8085
