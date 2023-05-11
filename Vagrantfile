@@ -1,5 +1,6 @@
 Vagrant.configure("2") do |config|
   config.vm.box = "ubuntu/jammy64"
+  config.vm.box_url = 'http://cloud-images.ubuntu.com/releases/22.04/release/ubuntu-22.04-server-cloudimg-amd64-vagrant.box'
 
   config.vm.define "server" do |server|
     server.vm.provision "shell",
